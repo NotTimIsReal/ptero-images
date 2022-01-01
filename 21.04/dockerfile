@@ -1,4 +1,4 @@
-FROM  ubuntu:21.04
+FROM  arm64v8/ubuntu:21.04
 LABEL org.opencontainers.image.source = &quot;https://github.com/NotTimIsReal/ptero-images&quot;
 RUN adduser -D -h /home/docker docker
 USER docker
