@@ -1,6 +1,7 @@
 FROM  arm64v8/ubuntu:16.04
 LABEL org.opencontainers.image.source = &quot;https://github.com/NotTimIsReal/ptero-images&quot;
 RUN adduser -D -h /home/docker docker
+RUN usermod -aG sudo docker
 USER docker
 ENV         USER=docker HOME=/home/docker
 WORKDIR     /home/docker
