@@ -1,0 +1,8 @@
+FROM --platform=$TARGETOS/$TARGETARCH ubuntu:18.04
+RUN adduser -D -h /home/docker docker
+USER docker
+ENV         USER=container HOME=/home/container
+WORKDIR     /home/container
+
+COPY        ./../entrypoint.sh /entrypoint.sh
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
