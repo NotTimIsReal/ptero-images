@@ -1,4 +1,4 @@
-FROM --platform=$TARGETOS/$TARGETARCH ubuntu:20.04
+FROM  ubuntu:20.04
 LABEL org.opencontainers.image.source = &quot;https://github.com/NotTimIsReal/ptero-images&quot;
 RUN adduser -D -h /home/docker docker
 USER docker
