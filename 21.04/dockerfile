@@ -2,7 +2,7 @@ FROM  arm64v8/ubuntu:21.04
 LABEL org.opencontainers.image.source = &quot;https://github.com/NotTimIsReal/ptero-images&quot;
 RUN adduser -D -h /home/docker docker
 USER docker
-ENV         USER=container HOME=/home/container
-WORKDIR     /home/container
+ENV         USER=docker HOME=/home/docker
+WORKDIR     /home/docker
 RUN apt -y update
 RUN apt -y install git curl nodejs python3 sudo
