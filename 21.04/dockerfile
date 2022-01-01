@@ -4,5 +4,5 @@ RUN adduser -D -h /home/docker docker
 USER docker
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
-COPY        ../entrypoint.sh ./entrypoint.sh
-CMD         [ "/bin/bash", "./entrypoint.sh" ]
+RUN apt -y update
+RUN apt -y install git curl nodejs python3
